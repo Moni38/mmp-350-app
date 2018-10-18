@@ -1,0 +1,48 @@
+/* monochromatic color scheme */
+
+body {
+	--hue: 240;
+	--sat: 50;
+	--lit: 50;
+	
+	/* main */
+	--main: hsl(
+		var(--hue), 
+		calc(var(--sat) * 1%), 
+		calc(var(--lit) * 1%)
+	);
+
+	/* change saturation for accent one */
+	--saturation: calc(var(--sat) - 20);
+	--accent-one: hsl(
+		var(--hue), 
+		calc(var(--saturation) * 1%), 
+		calc(var(--lit) * 1%)
+	);
+	
+	/* change lightness for accent two */
+	--lightness: calc(var(--lit) + 20);
+	--accent-two: hsl(
+		var(--hue), 
+		calc(var(--sat) * 1%), 
+		calc(var(--lightness) * 1%)
+	);
+			
+}	
+
+.post {
+	border: 1px solid var(--main);
+	margin: 0.25em;
+	padding: 0.25em;
+}
+
+.post-text {
+	color: var(--accent-one);
+}
+
+.post-info {
+	color: var(--accent-two);
+}
+
+
+

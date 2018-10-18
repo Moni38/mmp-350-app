@@ -1,0 +1,32 @@
+/* color scheme */
+
+body {
+	--hue: 209;
+	--sat: 100%;
+	--lit: 50;
+
+	--main-lit: calc(var(--lit) * 1%);
+	--main-color: hsl(var(--hue), var(--sat), var(--main-lit));
+		
+	--one: calc(var(--hue) + 180);
+	--accent-one: hsl(var(--one), var(--sat), var(--main-lit));
+
+	--comp-lit: calc(var(--lit) - 20);
+	--comp-lit-value: calc(var(--comp-lit) * 1%);
+	--accent-two: hsl(var(--one), var(--sat), var(--comp-lit-value));
+}
+
+.post {
+	border: 1px solid var(--main-color);
+		
+	margin: 0.5em;
+	padding: 0.5em;
+}
+
+.post-text {
+	color: var(--accent-one);
+}
+
+.post-author {
+	color: var(--accent-two);
+}

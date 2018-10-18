@@ -1,0 +1,34 @@
+/* color scheme */
+
+body {
+	--hue: 209;
+	--sat: 100%;
+	--lit: 50%;
+
+	--main-color: hsl(var(--hue), var(--sat), var(--lit));
+		
+	--one: calc(var(--hue) + 120);
+	--two: calc(var(--hue) - 120);
+
+	--accent-one: hsl(var(--one), var(--sat), var(--lit));
+	--accent-two: hsl(var(--two), var(--sat), var(--lit));
+}
+
+.post {
+	border: 1px solid var(--main-color);
+		
+	margin: 0.5em;
+	padding: 0.5em;
+}
+
+.post-text {
+	color: var(--accent-one);
+}
+
+.post-author {
+	color: var(--accent-two);
+}
+
+
+
+

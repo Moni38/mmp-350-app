@@ -1,0 +1,37 @@
+html,
+body {
+    height: 20%
+}
+
+h {
+    font-size: 10;
+}
+
+#container {
+    display: grid;
+    grid-template-colums: repeat(12, 1fr);
+    grid-template-columns: 2/4;
+}
+
+
+/*mobile layout*/
+
+@media(max-width: 400px) {
+    #container {
+        grid-template-rows: 20% max-content max-content max-content;
+    }
+    #main {
+        grid-column: 1/ span 12;
+        grid-row: 3;
+    }
+    #sidebar {
+        grid-column: 1 / span 12;
+        grid-row: 2;
+    }
+    #footer {
+        grid-column: 1/ span 12;
+        grid-row: 3;
+        background: yellow;
+    
+    }
+}
