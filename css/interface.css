@@ -1,0 +1,23 @@
+/* display when user is logged in */
+.user-logged-in #user-info,
+.user-logged-in #write-post {
+	display: block;
+}
+
+/* hidden when user is logged in */
+.user-logged-in #auth {
+	display: none;
+}
+
+/* display when no user */
+.no-user #auth,
+.no-user #add-photo {
+	display: block;
+}
+
+/* hidden when no user */
+.no-user #user-info,
+.no-user #profile-photo,
+.no-user #write-post {
+	display: none;
+}

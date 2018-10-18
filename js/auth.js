@@ -9,15 +9,17 @@ window.addEventListener('load', function() {
 	
 	firebase.auth().onAuthStateChanged(function(user) {
 		if (user) {
-			displayUserInfo();
+			document.getElementById('display-name').textContent = "Welcome, " + firebase.auth().currentUser.displayName;
+			
+			document.body.classList.add('user-logged-in');
+			document.body.classList.remove('no-user');
+		} else {
+			document.body.classList.add('no-user');
+			document.body.classList.remove('user-logged-in');
 		}
 	});
 	
-	function displayUserInfo() {
-		document.getElementById('display-name').textContent = "Welcome, " + firebase.auth().currentUser.displayName;
-		document.getElementById('user-info').style.display = 'block';
-		document.getElementById('auth').style.display = 'none';
-	}
+
 	
 	// new user
 	signUpButton.addEventListener('click', function() {
@@ -35,7 +37,8 @@ window.addEventListener('load', function() {
 				displayName: userNameAuth.value		
 			};
 			ref.set(userInfo);
-			credential.user.updateProfile(userInfo);
+			credential.user.updateProfile(userInfo)
+				.then(displayUserInfo);
 		});
 		
 		// promise error
