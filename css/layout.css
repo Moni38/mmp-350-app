@@ -9,10 +9,70 @@ h {
 
 #container {
     display: grid;
-    grid-template-colums: repeat(12, 1fr);
-    grid-template-columns: 2/4;
+  grid-template-areas: 
+    "header header header header"
+    "main main main sidebar"
+    "footer footer footer footer";
 }
 
+#header {
+  /* Start on Row 1 */
+  grid-row: 1;
+  /* Start on the first column line and extend all the to the last column line */
+  grid-column: 1 / 4;
+}
+
+#main {
+  /* Start on Row 2 */
+  grid-row: 2;
+  /* Start on the second column line and stop at the third column line */
+  grid-column: 1 / 3;
+}
+
+#sidebar{
+  /* Start on Row 2 */
+  grid-row: 2;
+  /* Start on the third column line and stop at the last column line */
+  grid-column: 4;
+}
+
+#footer {
+  /* Start on Row 3, the last row */
+  grid-row: 4;
+  /* Start on the first column line and extend all the to the last column line */
+  grid-column: 2 / 4;
+}
+/**#header {
+	grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+	grid-template-rows: 2;
+    grid-template-areas:"header" "sidebar"
+}
+
+#main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+	grid-template-areas:"main"
+}
+
+#sidebar {
+	grid-area: sidebar;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1;
+    grid-template-areas:"sidebar"
+}
+
+#footer {
+	grid-area: footer;
+    display: grid;
+    grid-template-columns:1fr;
+	grid-template-rows: 1;
+    grid-template-areas:"footer"
+}**/
 
 /*mobile layout*/
 
