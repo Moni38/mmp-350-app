@@ -1,0 +1,40 @@
+/*imported fonts from fonts.google.com*/
+/*harmonious*/
+@import url('https://fonts.googleapis.com/css?family=Abel|Roboto:400,700');
+/*contrast*/
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+/*conflict*/
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Gloria+Hallelujah');
+
+
+
+/* pairing 1 harmonious */
+/*
+.post-text {
+    font-family: "Abel", sans-serif;
+}
+
+.post-info {
+    font-family: "Roboto", sans-serif;
+}
+*/
+
+/* pairing 2 contrast*/
+/*
+.post-text {
+    font-family: "PT Serif", serif;
+}
+
+.post-info {
+    font-family: "Roboto", sans-serif;
+}
+*/
+
+/* pairing 3 conflict chose this one thought it looked cool*/
+.post-text {
+    font-family: "Gloria Hallelujah", cursive;
+}
+
+.post-info {
+    font-family: "Cutive Mono", monospace;
+}
