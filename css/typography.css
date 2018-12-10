@@ -7,7 +7,6 @@
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Gloria+Hallelujah');
 
 
-
 /* pairing 1 harmonious */
 /*
 .post-text {
@@ -30,11 +29,24 @@
 }
 */
 
+body {
+    font-family: "Roboto", sans-serif;
+}
+
 /* pairing 3 conflict chose this one thought it looked cool*/
 .post-text {
     font-family: "Gloria Hallelujah", cursive;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .post-info {
     font-family: "Cutive Mono", monospace;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 3em;
+}
+
+.likes-display {
+    margin-left: 10px
 }
